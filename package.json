@@ -1,0 +1,72 @@
+{
+  "name": "todomvc-electron",
+  "version": "0.42.0",
+  "description": "TodoMVC application spec implementation with electron",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "NODE_ICU_DATA='node_modules/full-icu' npx webpack --config webpack.config.js",
+    "prestart": "NODE_ICU_DATA='node_modules/full-icu' npm run build",
+    "start": "NODE_ICU_DATA='node_modules/full-icu' npx electron dist/main.js",
+    "test-unit": "NODE_ICU_DATA='node_modules/full-icu' npx gulp test-unit",
+    "pretest-features": "NODE_ICU_DATA='node_modules/full-icu' npm run build",
+    "test-features": "NODE_ICU_DATA='node_modules/full-icu' npx gulp test-features",
+    "test": "NODE_ICU_DATA='node_modules/full-icu' npx gulp test-unit && npx gulp test-features",
+    "console": "NODE_ICU_DATA='node_modules/full-icu' npx ts-node -O '{\"noUnusedLocals\": false, \"noUnusedParameters\": false, \"noImplicitAny\": false}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gowda/electron-sample.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "electron",
+    "react"
+  ],
+  "author": "Basavanagowda Kanur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gowda/electron-sample/issues"
+  },
+  "homepage": "https://github.com/gowda/electron-sample#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/del": "^3.0.1",
+    "@types/gulp": "^4.0.5",
+    "@types/gulp-mocha": "0.0.32",
+    "@types/mocha": "^5.2.6",
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.1",
+    "@types/webdriverio": "^5.0.0",
+    "@types/webpack-stream": "^3.2.10",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "del": "^3.0.0",
+    "electron": "^4.0.4",
+    "electron-chromedriver": "^4.0.0-beta.1",
+    "gulp": "^4.0.0",
+    "gulp-mocha": "^6.0.0",
+    "gulp-tslint": "^8.1.3",
+    "gulp-typescript": "^5.0.0",
+    "mocha": "^5.2.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "spectron": "^5.0.0",
+    "todomvc-app-css": "^2.1.2",
+    "todomvc-common": "^1.0.5",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^3.3.3",
+    "typescript-tslint-plugin": "^0.3.1",
+    "vinyl-named-with-path": "^1.0.0",
+    "webdriverio": "^5.4.17",
+    "webpack-cli": "^3.2.3",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "full-icu": "^1.2.1"
+  }
+}

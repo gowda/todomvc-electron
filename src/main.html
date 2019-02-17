@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>TodoMVC • Electron</title>
+		<link rel="stylesheet" href="../node_modules/todomvc-common/base.css">
+		<link rel="stylesheet" href="../node_modules/todomvc-app-css/index.css">
+		<!-- CSS overrides - remove if you don't need it -->
+		<link rel="stylesheet" href="./gui/app.css">
+	</head>
+	<body>
+		<section class="todoapp">
+			<header class="header">
+        <h1>todos</h1>
+        <div id="new-todo"></div>
+			</header>
+      <div id="content-main"></div>
+		</section>
+		<footer class="info">
+			<p>Double-click to edit a todo</p>
+			<!-- Remove the below line ↓ -->
+			<p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
+			<!-- Change this out with your name and url ↓ -->
+			<p>Created by <a href="http://todomvc.com">you</a></p>
+			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+		</footer>
+		<!-- Scripts here. Don't remove ↓ -->
+    <script src="../node_modules/todomvc-common/base.js"></script>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+
+    <script src="../dist/gui.js"></script>
+	</body>
+</html>

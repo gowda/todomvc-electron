@@ -1,0 +1,12 @@
+# Default build files directory
+/dist
+/build
+
+# Log files
+/logs
+
+# Node modules
+/node_modules
+
+# VS Code
+.vscode
